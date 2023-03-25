@@ -1,4 +1,4 @@
-import 'package:custom_implicit_animation/explicit_animation/explicit_animation_screen.dart';
+import 'package:custom_implicit_animation/explicit_animation_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
