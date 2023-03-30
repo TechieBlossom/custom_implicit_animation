@@ -1,4 +1,4 @@
-import 'package:custom_implicit_animation/custom_paint_animation_screen.dart';
+import 'package:custom_implicit_animation/animated_polygon_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.light,
       ),
-      home: const CustomPaintAnimationScreen(),
+      home: const AnimatedPolygonScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -4,16 +4,11 @@ import 'package:flutter/cupertino.dart';
 
 class ShapePainter extends CustomPainter {
   ShapePainter({
-    required this.offset1,
-    required this.offset2,
-    required this.offset3,
-    required this.offset4,
+    required this.offsets,
   });
 
-  final Offset offset1;
-  final Offset offset2;
-  final Offset offset3;
-  final Offset offset4;
+  //1
+  final List<Offset?> offsets;
 
   @override
   void paint(Canvas canvas, Size size) {
@@ -23,9 +18,16 @@ class ShapePainter extends CustomPainter {
       ..maskFilter = const MaskFilter.blur(BlurStyle.solid, 4.0)
       ..strokeWidth = 5.0;
 
+    //2
+    final nonNullableOffsets =
+        offsets.where((element) => null != element).toList() as List<Offset>;
+
     canvas.drawPoints(
       PointMode.polygon,
-      [offset1, offset2, offset3, offset4, offset1],
+      [
+        ...nonNullableOffsets,
+        nonNullableOffsets.first,
+      ],
       paint,
     );
   }
