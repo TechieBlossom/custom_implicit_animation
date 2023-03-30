@@ -69,16 +69,19 @@ class _DotsScreenState extends State<DotsScreen> {
         title: const Text('Shapes with Dots'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           SizedBox(
             width: 280,
-            height: 280,
+            height: 200,
             child: Stack(
-              children:
-                  _currentOffsets.map((offset) => AP(offset: offset)).toList(),
+              children: _currentOffsets
+                  .map((offset) => AP(offset: offset + const Offset(60, 10)))
+                  .toList(),
             ),
           ),
-          Row(
+          ButtonBar(
+            alignment: MainAxisAlignment.center,
             children: [
               FilledButton(
                 onPressed: () => setState(
