@@ -41,33 +41,37 @@ class _AnimatedPolygonScreenState extends State<AnimatedPolygonScreen> {
               offsets: _offsets(),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: FilledButton(
-              onPressed: () => _setPolygonType(PolygonType.scaleneTriangle),
-              child: const Text('Scalene Triangle'),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: FilledButton(
-              onPressed: () => _setPolygonType(PolygonType.square),
-              child: const Text('Square'),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: FilledButton(
-              onPressed: () => _setPolygonType(PolygonType.kite),
-              child: const Text('Kite'),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: FilledButton(
-              onPressed: () => _setPolygonType(PolygonType.regularPentagon),
-              child: const Text('Regular Pentagon'),
-            ),
+          Wrap(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: FilledButton(
+                  onPressed: () => _setPolygonType(PolygonType.scaleneTriangle),
+                  child: const Text('Scalene Triangle'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: FilledButton(
+                  onPressed: () => _setPolygonType(PolygonType.square),
+                  child: const Text('Square'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: FilledButton(
+                  onPressed: () => _setPolygonType(PolygonType.kite),
+                  child: const Text('Kite'),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: FilledButton(
+                  onPressed: () => _setPolygonType(PolygonType.regularPentagon),
+                  child: const Text('Regular Pentagon'),
+                ),
+              ),
+            ],
           ),
         ],
       ),
