@@ -1,4 +1,4 @@
-import 'package:custom_implicit_animation/explicit_animation/explicit_animation_screen.dart';
+import 'package:custom_implicit_animation/dots_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.light,
       ),
-      home: const ExplicitAnimationScreen(),
+      home: const DotsScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
